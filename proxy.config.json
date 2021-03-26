@@ -1,0 +1,11 @@
+{
+   "/node": {
+      "target": "http://www.lunan"
+   },
+   "/app": {
+      "target": "http://www.lunan"
+   },
+   "/App": {
+      "target": "http://www.lunan"
+   }
+}
