@@ -12,6 +12,8 @@ import { SharedModule } from './shared/shared.module';
 import { IconDefinition } from '@ant-design/icons-angular';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { FormsModule } from '@angular/forms';
+import { ReuseStrategy } from './ReuseStrategy';
+import { RouteReuseStrategy } from '@angular/router';
 // import { FilterOutline } from '@ant-design/icons-angular/icons';
 
 const icons: IconDefinition[] = [];
@@ -39,6 +41,11 @@ registerLocaleData(zh);
     {
       provide: LocationStrategy,
       useClass: HashLocationStrategy
+    },
+    // 路由复用
+    {
+      provide: RouteReuseStrategy,
+      useClass: ReuseStrategy
     }
   ],
   bootstrap: [AppComponent]
